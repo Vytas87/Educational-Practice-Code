@@ -12,7 +12,8 @@ of 6. Here is the outputs for a constant height of 4 and 7 respectively:
                                         \\\\\\\\\\!!!!!!//////////
                                         \\\\\\\\\\\\!!////////////
 
-(You must solve this problem using only ONE public static final constant, not multiple constants; and its value must be used in the way described in this problem.)
+(You must solve this problem using only ONE public static final constant, not multiple constants;
+and its value must be used in the way described in this problem.)
 ***********************************************************************************************/
 
 public class SlashFigure2 {
