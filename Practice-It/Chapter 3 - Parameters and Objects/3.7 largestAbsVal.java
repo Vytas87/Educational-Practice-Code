@@ -1,0 +1,28 @@
+/**********************************************************************************************
+Write a method largestAbsVal that accepts three integers as parameters and returns the largest
+of their three absolute values. For example, a call of largestAbsVal(7, -2, -11) would return
+11, and a call of largestAbsVal(-4, 5, 2) would return 5.
+***********************************************************************************************/
+
+public static int largestAbsVal(int a, int b, int c) {
+    if (a < 0) {
+        a = -a;
+    }
+    if (b < 0) {
+        b = -b;
+    }
+    if (c < 0) {
+        c = -c;
+    }
+    if (a <= b) {
+        if (b <= c) {
+            return c;
+        } else {
+            return b;
+        }
+    } else if (a <= c) {
+        return c;
+    } else {
+        return a;
+    }
+}
