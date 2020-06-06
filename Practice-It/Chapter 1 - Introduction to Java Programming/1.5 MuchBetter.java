@@ -1,5 +1,5 @@
 /**********************************************************************************************
-    Write a complete Java program in a class named MuchBetter that prints the following output:
+Write a complete Java program in a class named MuchBetter that prints the following output:
     
                     A "quoted" String is
                     'much' better if you learn
