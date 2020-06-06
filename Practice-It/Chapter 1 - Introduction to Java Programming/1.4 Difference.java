@@ -1,5 +1,5 @@
 /**********************************************************************************************
-    Write a complete Java program in a class named Difference that prints the following output:
+Write a complete Java program in a class named Difference that prints the following output:
     
                     What is the difference between
                     a ' and a "?  Or between a " and a \"?
