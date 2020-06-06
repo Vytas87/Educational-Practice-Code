@@ -1,5 +1,5 @@
 /**********************************************************************************************
-    Write a complete Java program in a class named Egg that displays the following output:
+Write a complete Java program in a class named Egg that displays the following output:
 
                       _______
                      /       \
