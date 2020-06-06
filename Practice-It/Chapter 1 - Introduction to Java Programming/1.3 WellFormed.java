@@ -1,5 +1,5 @@
 /**********************************************************************************************
-    Write a complete Java program in a class named WellFormed that prints the following output:
+Write a complete Java program in a class named WellFormed that prints the following output:
 
                     A well-formed Java program has
                     a main method with { and }
