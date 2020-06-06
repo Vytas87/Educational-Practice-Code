@@ -1,6 +1,6 @@
 /**********************************************************************************************
-    Write a complete Java program called Meta whose output is the text that would be the source
-    code of a Java program named Hello that prints "Hello, world!" as its output:
+Write a complete Java program called Meta whose output is the text that would be the source
+code of a Java program named Hello that prints "Hello, world!" as its output:
 
                     public class Hello {
                         public static void main(String[] args) {
