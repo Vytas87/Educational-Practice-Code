@@ -1,6 +1,7 @@
 /**********************************************************************************************
 Write a method named printFactors that accepts an integer as its parameter and uses a fencepost
-loop to print the factors of that number, separated by the word " and ". For example, the number 24's factors should print as:
+loop to print the factors of that number, separated by the word " and ". For example, the number
+24's factors should print as:
 
                     1 and 2 and 3 and 4 and 6 and 8 and 12 and 24
 
