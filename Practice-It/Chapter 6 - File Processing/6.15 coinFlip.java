@@ -39,11 +39,9 @@ public static void coinFlip(Scanner input) {
         while (flip.hasNext()) {
             result = flip.next();
             if (result.equals("H")) {
-                count++;
                 countH++;
-            } else { // result.equals("T")
-                count++;
             }
+            count++;
         }
         
         double pctH = 100.0 * countH / count;
