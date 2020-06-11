@@ -4,7 +4,8 @@ that the input file data represents results of sets of coin flips that are eithe
 tails (T) in either upper or lower case, separated by at least one space. Your method should
 consider each line to be a separate set of coin flips and should output to the console the num-
 ber of heads and the percentage of heads in that line, rounded to the nearest tenth. If this
-percentage is more than 50%, you should print a "You win" message. For example, consider the following input file:
+percentage is more than 50%, you should print a "You win" message. For example, consider the
+following input file:
 
                     H T H H T
                     T t   t T h  H
