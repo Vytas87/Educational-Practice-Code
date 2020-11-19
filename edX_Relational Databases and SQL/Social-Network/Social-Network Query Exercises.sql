@@ -3,7 +3,7 @@ SELECT name
 FROM Highschooler, Friend
 WHERE ID = ID1
 	AND ID2 IN (SELECT ID FROM Highschooler
-			    WHERE name = 'Gabriel');
+			     WHERE name = 'Gabriel');
 
 SELECT H1.name as FriendsOfaGabriel
 FROM Highschooler H1
@@ -25,7 +25,7 @@ FROM Highschooler H, Highschooler L, Likes
 WHERE H.ID = ID1
 	AND L.ID = ID2
 	AND ID2 IN(SELECT ID FROM Highschooler
-			   WHERE H.grade - L.grade > 1);
+			    WHERE H.grade - L.grade > 1);
 
 
 --- 3. For every pair of students who both like each other,
@@ -36,8 +36,8 @@ FROM Highschooler H1
 	JOIN Likes L1 ON H1.ID = L1.ID1
 	JOIN Highschooler H2 ON H2.ID = L1.ID2
 WHERE EXISTS (SELECT ID1 FROM Likes L2
-			  WHERE L2.ID1 = H2.ID
-			  	AND L2.ID2 = H1.ID)
+			   WHERE L2.ID1 = H2.ID
+			  	 AND L2.ID2 = H1.ID)
 	  AND H1.name < H2.name;
 
 SELECT H1.name, H1.grade, H2.name, H2.grade
