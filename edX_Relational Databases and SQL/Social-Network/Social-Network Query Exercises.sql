@@ -78,11 +78,11 @@ ORDER BY H1.grade, H1.name;
 SELECT This.name, This.grade
 FROM Highschooler This
 WHERE This.ID IN(SELECT This.ID FROM Highschooler Other, Friend
-		     WHERE This.ID = Friend.ID1 AND Other.ID = Friend.ID2
-		   	   AND This.grade = Other.grade)
+		   		  WHERE This.ID = Friend.ID1 AND Other.ID = Friend.ID2
+		   	 	    AND This.grade = Other.grade)
   AND This.ID NOT IN(SELECT This.ID FROM Highschooler Other, Friend
-				 WHERE This.ID = Friend.ID1 AND Other.ID = Friend.ID2
-				   AND This.grade <> Other.grade)
+				  	  WHERE This.ID = Friend.ID1 AND Other.ID = Friend.ID2
+				   		AND This.grade <> Other.grade)
 ORDER BY This.grade, This.name;
 
 
