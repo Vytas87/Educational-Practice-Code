@@ -3,7 +3,7 @@ SELECT name
 FROM Highschooler, Friend
 WHERE ID = ID1
 	AND ID2 IN (SELECT ID FROM Highschooler
-			     WHERE name = 'Gabriel');
+		    WHERE name = 'Gabriel');
 
 SELECT H1.name as FriendsOfaGabriel
 FROM Highschooler H1
@@ -25,7 +25,7 @@ FROM Highschooler H, Highschooler L, Likes
 WHERE H.ID = ID1
 	AND L.ID = ID2
 	AND ID2 IN(SELECT ID FROM Highschooler
-			    WHERE H.grade - L.grade > 1);
+		   WHERE H.grade - L.grade > 1);
 
 
 --- 3. For every pair of students who both like each other,
@@ -36,9 +36,9 @@ FROM Highschooler H1
 	JOIN Likes L1 ON H1.ID = L1.ID1
 	JOIN Highschooler H2 ON H2.ID = L1.ID2
 WHERE EXISTS (SELECT ID1 FROM Likes L2
-			   WHERE L2.ID1 = H2.ID
-			  	 AND L2.ID2 = H1.ID)
-	  AND H1.name < H2.name;
+	      WHERE L2.ID1 = H2.ID
+	      AND L2.ID2 = H1.ID)
+      AND H1.name < H2.name;
 
 SELECT H1.name, H1.grade, H2.name, H2.grade
 FROM Highschooler H1, Highschooler H2, Likes L1, Likes L2
@@ -71,18 +71,18 @@ FROM Highschooler H1, Highschooler H2, Friend
 WHERE H1.ID = Friend.ID1 AND H2.ID = Friend.ID2
   AND H1.grade = H2.grade
   AND H1.ID NOT IN(SELECT H1.ID FROM Highschooler, Friend
-				    WHERE H1.ID = Friend.ID1 AND ID = Friend.ID2
-				  	  AND H1.grade <> grade)
+		   WHERE H1.ID = Friend.ID1 AND ID = Friend.ID2
+		   AND H1.grade <> grade)
 ORDER BY H1.grade, H1.name;
 
 SELECT This.name, This.grade
 FROM Highschooler This
 WHERE This.ID IN(SELECT This.ID FROM Highschooler Other, Friend
-		   		  WHERE This.ID = Friend.ID1 AND Other.ID = Friend.ID2
-		   	 	    AND This.grade = Other.grade)
+		 WHERE This.ID = Friend.ID1 AND Other.ID = Friend.ID2
+		 AND This.grade = Other.grade)
   AND This.ID NOT IN(SELECT This.ID FROM Highschooler Other, Friend
-				  	  WHERE This.ID = Friend.ID1 AND Other.ID = Friend.ID2
-				   		AND This.grade <> Other.grade)
+		     WHERE This.ID = Friend.ID1 AND Other.ID = Friend.ID2
+		     AND This.grade <> Other.grade)
 ORDER BY This.grade, This.name;
 
 
@@ -108,9 +108,9 @@ FROM Highschooler;
 SELECT name, grade
 FROM Highschooler
 WHERE ID IN (SELECT ID2
-			   FROM Likes
-			  GROUP BY ID2
-			 HAVING COUNT(*) > 1);
+	     FROM Likes
+	     GROUP BY ID2
+	     HAVING COUNT(*) > 1);
 
 /* The following query is the simplest, but Postgres does not allow attributes in the SELECT clause
    that are not in the GROUP BY clause */
