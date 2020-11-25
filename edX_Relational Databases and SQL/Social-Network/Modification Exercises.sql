@@ -55,7 +55,7 @@ WHERE F1.ID2 = F2.ID1 AND F1.ID1 <> F2.ID2
   AND F2.ID2 NOT IN (SELECT F3.ID2 FROM Friend F3
 					  WHERE F3.ID1 = F1.ID1);
 
-Restore the database:
+--Restore the database:
 drop table if exists Friend;
 create table Friend(ID1 int, ID2 int);
 insert into Friend values (1510, 1381);
