@@ -27,6 +27,7 @@ WHERE mID IN(SELECT mID FROM Movie NATURAL JOIN Rating
 			  WHERE year < 1970 OR year > 2000)
   AND stars < 4;
 
+-- Restore the database:
 drop table if exists Rating;
 create table Rating(rID int, mID int, stars int, ratingDate date);
 insert into Rating values(201, 101, 2, '2011-01-22');
